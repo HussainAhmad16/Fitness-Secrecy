@@ -97,7 +97,7 @@ function App() {
     <React.Fragment>
       {shouldRenderHeaderAndFooter && <Header />}
       <main>
-       <Routes>
+        <Routes>
           {!isLoggedin ?
           <>
           <Route path='/Login' element={<Login />} /> 
@@ -109,11 +109,11 @@ function App() {
           <Route path='/DietPlans' element={<DietPlansList />} />
           <Route path='/FitnessPlans' element={<FitnessPlans />} />
           <Route path='/TrainingPlans' element={<TrainingPlans />} />
-             <Route
-            path='/BlogDetails/:id'
-            element={<BlogDetails subnavLinks={blogDetailsLinks} />} 
-          />
-          </>:
+          <Route path='/BlogDetails/:id'element={<BlogDetails subnavLinks={blogDetailsLinks} />} />
+          <Route path='/BuyDietPlan/:id' element={<BuyDietPlan />} />
+         
+          </>
+          :
           <>
             <Route path='/' element={<GymHome />} /> 
           <Route path='/Login' element={<Login />} />
