@@ -1,4 +1,4 @@
-First of all, install Node Package Manager in all three directories: Root/Main, Frontend, and Backend. 
+First of all, install Node Package Manager in all three directories: Root/Main, Frontend, and Backend so the node_modules will be back in all of the three directories , because i ignored them in git.
 
 Then come back to the root directory. To run the project, I have utilized the ‘concurrently’ package which allows both the frontend and backend to start simultaneously.
 
