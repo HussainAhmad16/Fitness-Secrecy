@@ -222,10 +222,10 @@ const Blog = ({
                   {isUser && isLoggedin && (
                     <StyledGrid item xs={12} sm={6}>
                       <StyledIconButton onClick={handleEdit}>
-                        <EditIcon />
+                        <EditIcon sx={{color:'orange'}} />
                       </StyledIconButton>
                       <StyledIconButton onClick={handleDeletion}>
-                        <DeleteIcon />
+                        <DeleteIcon sx={{color:'red'}} />
                       </StyledIconButton>
                     </StyledGrid>
                   )}
