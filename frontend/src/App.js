@@ -28,7 +28,7 @@ import FitnessPlans from './components/FitnessPlans';
 function App() {
   const isLoggedin = useSelector(state => state.auth.isLoggedin);
   const location = useLocation();
-  const isLoginPage = location.pathname === '/Login';
+  const isLoginPage = location.pathname === '/login';
   const isSignupPage = location.pathname === '/Signup';
   const shouldRenderHeaderAndFooter = !isLoginPage && !isSignupPage;
   let userRole = localStorage.getItem("userRole");
@@ -86,7 +86,13 @@ function App() {
   const links = linksByRoute[currentRoute] || [];
   const blogDetailsLinks = linksByRoute["/BlogDetails/:id"] || [];
 
-
+  useEffect(() => {
+    if (localStorage.getItem("userId")||localStorage.getItem("userRole")) {
+      
+    } 
+  
+  }, [dispatch])
+  
   return (
     <React.Fragment>
       {shouldRenderHeaderAndFooter && <Header />}
