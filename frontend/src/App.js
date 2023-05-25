@@ -97,8 +97,21 @@ function App() {
     <React.Fragment>
       {shouldRenderHeaderAndFooter && <Header />}
       <main>
-        <Routes>
-          <Route path='/' element={<GymHome />} />
+       <Routes>
+          {!isLoggedin ?
+          <>
+          <Route path='/Login' element={<Login />} /> 
+          <Route path='/Signup' element={<Signup />} />
+          <Route path='/' element={<GymHome />} /> 
+          <Route path='/blogs' element={<Blogs />} />
+          <Route path='/AboutUs' element={<AboutUs />} />
+          <Route path='/ContactUs' element={<ContactUs />} />
+          <Route path='/DietPlans' element={<DietPlansList />} />
+          <Route path='/FitnessPlans' element={<FitnessPlans />} />
+          <Route path='/TrainingPlans' element={<TrainingPlans />} />
+          </>:
+          <>
+            <Route path='/' element={<GymHome />} /> 
           <Route path='/Login' element={<Login />} />
           <Route path='/Signup' element={<Signup />} />
           <Route path='/blogs' element={<Blogs />} />
@@ -106,7 +119,7 @@ function App() {
           <Route path='/EditBlog/:id' element={<EditBlog />} />
           <Route
             path='/BlogDetails/:id'
-            element={<BlogDetails subnavLinks={blogDetailsLinks} />} // Pass the subnavLinks prop
+            element={<BlogDetails subnavLinks={blogDetailsLinks} />} 
           />
           <Route path='/blogs/add' element={<AddBlog />} />
           <Route path='/AddBlog' element={<AddBlog />} />
@@ -119,6 +132,7 @@ function App() {
           <Route path='/BuyDietPlan/:id' element={<BuyDietPlan />} />
           <Route path='/UsersList' element={<UsersList />} />
           <Route path='/FitnessPlans' element={<FitnessPlans />} />
+          </> }
         </Routes>
       </main>
       {shouldRenderHeaderAndFooter && (
