@@ -28,7 +28,7 @@ import FitnessPlans from './components/FitnessPlans';
 function App() {
   const isLoggedin = useSelector(state => state.auth.isLoggedin);
   const location = useLocation();
-  const isLoginPage = location.pathname === '/login';
+  const isLoginPage = location.pathname === '/Login';
   const isSignupPage = location.pathname === '/Signup';
   const shouldRenderHeaderAndFooter = !isLoginPage && !isSignupPage;
   let userRole = localStorage.getItem("userRole");
