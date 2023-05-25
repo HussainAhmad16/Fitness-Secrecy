@@ -1,0 +1,6 @@
+
+    // convert image file to Base64 string
+    // const reader = new FileReader();
+    // reader.readAsDataURL(inputs.image);
+    // reader.onload = () => {
+    //   const imageString = reader.result;

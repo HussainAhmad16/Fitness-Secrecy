@@ -1,0 +1,3 @@
+To run the project, I have utilized the "concurrently" package, which allows both the frontend and backend to start simultaneously.
+
+To execute this, run the following command: "npm run start."
