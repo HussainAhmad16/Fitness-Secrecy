@@ -4,7 +4,8 @@ To execute this, run the following command: ‘npm run start’.
 Some of the features are available after login of User, while others are available after login as Admin.
 Admin Auth: Email: coderfounded@gmail.com 
 Pass: Coderfounded16@. Data Base info is on the app.js file in the backend.
-The login auth of cloud database is set up with one of my gmail accounts:
+The login auth of cloud database is set up with one of my gmail accounts.
+so 1st login this gmail in Google then you can access database account on clicking sign in with google directly.
 coderfounded@gmail.com
 Pass: Coderfounded16@
 
