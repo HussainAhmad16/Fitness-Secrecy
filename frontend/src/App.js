@@ -109,6 +109,10 @@ function App() {
           <Route path='/DietPlans' element={<DietPlansList />} />
           <Route path='/FitnessPlans' element={<FitnessPlans />} />
           <Route path='/TrainingPlans' element={<TrainingPlans />} />
+             <Route
+            path='/BlogDetails/:id'
+            element={<BlogDetails subnavLinks={blogDetailsLinks} />} 
+          />
           </>:
           <>
             <Route path='/' element={<GymHome />} /> 
