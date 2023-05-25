@@ -36,6 +36,8 @@ function App() {
   const { id } = useParams();
   const matchBlogDetails = useMatch(`/BlogDetails/:id`);
 
+//   These are for Mini drawer on the page through these links it will dynamically change the sub navigations 
+  
   const linksByRoute = {
     "/blogs": [
       { label: "Blogs", url: "/blogs" },
@@ -85,6 +87,7 @@ function App() {
   const currentRoute = location.pathname;
   const links = linksByRoute[currentRoute] || [];
   const blogDetailsLinks = linksByRoute["/BlogDetails/:id"] || [];
+  
 
   useEffect(() => {
     if (localStorage.getItem("userId")||localStorage.getItem("userRole")) {
